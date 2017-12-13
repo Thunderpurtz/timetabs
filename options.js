@@ -1,8 +1,8 @@
 // Saves options to chrome.storage
 function save_options() {
-  var likesColor = document.getElementById('like').checked;
+  var extensionEnabled = document.getElementById('like').checked;
   chrome.storage.sync.set({
-    enabled: likesColor
+    enabled: extensionEnabled
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');

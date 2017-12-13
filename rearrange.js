@@ -12,7 +12,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
             tabCount.all = tabs.length;
         };
         chrome.tabs.query({currentWindow: true}, countAll);
-        chrome.tabs.move(tabId, {index: tabCount.all});
+        chrome.tabs.move(tabId, {index: tabCount.all - 1});
     }
     });
 
